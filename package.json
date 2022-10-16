@@ -1,10 +1,15 @@
 {
   "name": "myfirst",
   "version": "0.0.0",
-
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.11.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node app/server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -12,10 +17,13 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "^14.1.0",
     "@angular/animations": "^14.1.2",
     "@angular/cdk": "^14.1.2",
+    "@angular/cli": "~14.1.0",
     "@angular/common": "^14.1.0",
     "@angular/compiler": "^14.1.0",
+    "@angular/compiler-cli": "^14.1.0",
     "@angular/core": "^14.1.0",
     "@angular/forms": "^14.1.0",
     "@angular/localize": "^14.1.0",
@@ -27,11 +35,14 @@
     "@popperjs/core": "^2.10.2",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "font-awesome": "^4.7.0",
     "json-server": "^0.17.0",
     "ng-angular-popup": "^0.1.2",
     "ngx-spinner": "^14.0.0",
     "ngx-toastr": "^15.0.0",
+    "path": "^0.12.7",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
