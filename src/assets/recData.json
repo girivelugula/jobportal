@@ -1,0 +1,84 @@
+{
+  "RecruiterDetails": [
+    {
+      "cname": "Varcas Tech",
+      "lname": "Hyderabad",
+      "email": "varcastechnologies@gmail.com",
+      "password": "Varcas@1234",
+      "phone": "9875632107",
+      "id": 1
+    },
+    {
+      "cname": "Girizz Tech",
+      "lname": "New Delhi",
+      "email": "girizztechnologies@gmail.com",
+      "password": "Giri@1234",
+      "phone": "9848382131",
+      "id": 2
+    },
+    {
+      "cname": "Suresh Tech",
+      "lname": "Noida",
+      "email": "sureshtech@gmail.com",
+      "password": "Suresh@1234",
+      "phone": "9874563210",
+      "cId": null,
+      "id": 3
+    }
+  ],
+  "JobData": [
+    {
+      "jobtitle": "Web Developer",
+      "location": "Hyderabad",
+      "jdesc": "Web Developing Skills with atleast 8 Years of Experience",
+      "skills": "React Js Framework",
+      "recId": "1",
+      "id": 1
+    },
+    {
+      "jobtitle": "Python Developer",
+      "location": "Hyderabad",
+      "jdesc": "Python Developer with atleast 6 years experience , CTC starts from 24L/Year",
+      "skills": "Python , Java , C , C++",
+      "recId": "2",
+      "id": 2
+    },
+    {
+      "jobtitle": "Java Script Expert",
+      "location": "Visakhapatnam",
+      "jdesc": "Java Script Coding with the related frame works.",
+      "skills": "Java Script, Angular , React JS",
+      "recId": "1",
+      "jobId": "",
+      "id": 3
+    },
+    {
+      "jobtitle": "Senior Dev Ops Engineer",
+      "location": "Hyderabad",
+      "jdesc": "Required the skilled Dev Ops , need to maintain a group of junior engineers under him",
+      "skills": "All Dev Ops Tools",
+      "recId": "2",
+      "jobId": "",
+      "id": 4
+    },
+    {
+      "jobtitle": "SQL Developer",
+      "location": "Chennai",
+      "jdesc": "SQL Based Development Job",
+      "skills": "SQL Server , Angular",
+      "recId": "2",
+      "jobId": "",
+      "id": 5
+    },
+    {
+      "jobtitle": "angular",
+      "location": "hyderabad",
+      "jdesc": "html,css,angular,type script",
+      "skills": "frontend developer",
+      "recId": "1",
+      "jobId": "",
+      "id": 6
+    }
+  ],
+  "WhoApplied": []
+}

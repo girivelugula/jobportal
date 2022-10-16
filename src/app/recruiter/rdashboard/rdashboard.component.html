@@ -1,0 +1,78 @@
+<input type="checkbox" id="nav-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <h3><span class="lab la-fedora la-2x"></span><span class="font">Pardh Jobs</span></h3>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a (click)="onDashClick()" class="active"><span class=" las la-home"></span><span
+                        class="font">Dashboard</span></a>
+            </li>
+            <li>
+                <a (click)="onJobClick()"><span class="las la-search"></span><span class="font">Post a
+                        Job</span></a>
+            </li>
+            <li>
+                <a (click)="onPostedClick()"><span class="las la-envelope"></span><span class="font">Posted
+                        Jobs</span></a>
+            </li>
+            <li>
+                <a (click)="onMessagesClick()"><span class="las la-envelope"></span><span
+                        class="font">Messages</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main-content">
+    <header>
+        <h2>
+            <label for="nav-toggle">
+                <i (click)="toggle()" *ngIf="isArrow" class="las la-angle-double-left"></i>
+                <i (click)="toggle2()" *ngIf="!isArrow" class="las la-angle-double-right"></i>
+            </label><span class="font">Dashboard</span>
+        </h2>
+        <div class="search">
+            <span class="las la-search"></span>
+            <input type="search" placeholder="Search here">
+            <button class="b1" (click)="onLogout()">Logout</button>
+        </div>
+
+        <div class="user">
+
+            <img src="assets/user.jpg" (click)="onProfileClick()" height="50px" width="50px">
+            <div>
+                <h4 class="font">{{username}}</h4>
+                <small class="font">Premium</small>
+
+            </div>
+        </div>
+    </header>
+</div>
+
+<div style="position: relative;bottom:90px;right: 50px;">
+
+    <div class="content" *ngIf="isDash">
+       <app-rcdash></app-rcdash>
+    </div>
+    <div class="content" *ngIf="isMessages">
+        <app-messages></app-messages>
+    </div>
+
+    <div class="col-md-6 content" *ngIf="isJob">
+        <app-postajob></app-postajob>
+    </div>
+
+
+    <div class="content" *ngIf="isProfile">
+        <h1>Company Profile</h1> <br>
+        Company : {{companyName}}<br>
+        Location : {{locationName}}<br>
+        Email: {{email}}<br>
+        Phone : {{phone}}<br>
+    </div>
+    <div class="content" *ngIf="isPosted">
+        <app-postedjobs></app-postedjobs>
+    </div>
+</div>

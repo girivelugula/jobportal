@@ -1,0 +1,309 @@
+.body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F9F8FE;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.menu
+{
+    padding: 25px 20px;
+    background-color: #F9F8FE;
+}
+.menu .logo
+{
+    font-weight: bold;
+    position: relative;
+    font-family: 'MuseoModerno';
+    cursor: pointer;
+    bottom: 5px;
+    font-size: 25px;
+}
+
+.menu .title .icon
+{
+    color:#40189D;
+    font-size: 40px;
+}
+.menu .title img,p
+{
+    display: inline;
+}
+.b1
+{
+    font-weight: bold;
+    padding:5px 15px;
+    background: transparent;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    box-shadow: 5px 5px #40189D;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.b1:hover
+{
+    border: none;
+    color: #F9F8FE;
+    box-shadow: none;
+    background-color: #40189D;
+}
+.row2
+{
+    padding: 50px 0px;
+}
+.row2 .col1 .p1
+{
+    font-weight: bold;
+    font-size: 20px;
+    color:#9a98ce;
+}
+.row2 .col1 .p2
+{
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'MuseoModerno';
+    margin-bottom: 30px;
+}
+.row2 .col1 .p3
+{
+    color:rgb(129, 123, 123);
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.row2 .col2 img
+{
+    border-radius: 20px;
+}
+.b2
+{
+    font-weight: bold;
+    font-size: 20px;
+    padding:10px 45px;
+    background: transparent;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    box-shadow: 5px 5px  #40189D;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.b2:hover
+{
+    border: none;
+    color: #F9F8FE;
+    box-shadow: none;
+    background-color:  #40189D;
+}
+.row5
+{
+    margin-top: 25px;
+    background: #36363B;
+    padding: 50px 80px 100px 80px;
+}
+.row5 .p1
+{
+    color:#F9F8FE;
+    font-weight: bold;
+    font-family: 'MuseoModerno';
+    font-size: 40px;
+}
+.row5 .p2
+{
+    font-size: 17px;
+    color:#F9F8FE;
+}
+.row5 .b3
+{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 40px;
+    border: none;
+    color: #F9F8FE;
+    background-color:  #40189D;
+    border-radius: 50px;
+    margin-top: 25px;
+}
+.row5 .b3:hover
+{
+    border: none;
+    color: #40189D;
+    background-color:  #fff;
+}
+.row8
+{
+    padding: 50px 15px;
+    background-color:  #eeecf2;
+}
+.row8 .col1 img
+{
+    border-radius: 20px;
+}
+.row8 .col2
+{
+    background-color: #36363B;
+    color: #F9F8FE;
+    border-radius: 20px;
+}
+.row8 .col2 .content
+{
+    padding: 50px 20px;
+}
+.row8 .col2 .content .p1
+{
+    background-color: #40189D;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color:#ffffff;
+}
+.row8 .col2 .p2
+{
+    font-family: 'MuseoModerno';
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.row8 .col2 .p3
+{
+    color:rgb(247, 243, 243);
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.row8 .col2 .subrow
+{
+    padding: 0px 80px;
+}
+.row8 .col2 .subrow .ma
+{
+    font-size: 25px;
+    font-family: 'MuseoModerno';
+}
+.row8 .col2 .subrow .ma
+{
+    font-size: 25px;
+    font-family: 'MuseoModerno';
+}
+.row8 .col2 .subrow i
+{
+    position: relative;
+    right: 10px;
+    top: 5px;
+    color:  #7d7d7d;
+}
+
+/*Animation*/
+/* .circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #F6A9A9;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.5;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+   */

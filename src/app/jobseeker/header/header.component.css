@@ -1,0 +1,83 @@
+.menu
+{
+    background-color: #40189D;
+    color:  #fff;
+    padding: 15px;
+    box-shadow: 0px 0.25px 5px #888888;
+}
+.title
+{
+    line-height: 1.5;
+    font-family: 'MuseoModerno';
+    color: white ;
+    position: relative;
+    top: 5px;
+}
+.icon
+{
+    position: relative;
+    top:5px;
+    font-size: 25px;
+}
+.menu .logo i,h3
+{
+    display: inline;
+}
+.menu .submenu
+{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.menu .submenu .click
+{
+    padding: 20px 25px;
+    color: white;
+    font-weight: bold;
+}
+.menu .submenu .click:hover
+{
+    cursor: pointer;
+}
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #40189D;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 25px;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin-top: 25px;
+    margin-right: 25px;
+    border:2px solid black;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+.dropdown:hover .dropdown-content a {
+    transition-property: padding-right;
+    transition-duration: 0.5s;
+}
+.dropdown:hover .dropdown-content a:hover {
+    padding-right: 0 2rem;
+}
+a
+{
+    font-size: 14px;
+    text-decoration: none;
+    color:white;
+}
+a:hover
+{
+    cursor:pointer;
+    border-bottom:3px solid white;
+}

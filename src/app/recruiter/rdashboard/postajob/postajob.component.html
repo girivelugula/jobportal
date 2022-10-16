@@ -1,0 +1,52 @@
+<div class="post">
+    <h2>Post a Job here below:</h2><br>
+    <form [formGroup]="postForm" (ngSubmit)="onPost()">
+        <div class="col-md-7 form-outline">
+
+            <label class="form-label">Job Title:</label>
+            <input type="text" formControlName="jobtitle" class="form-control form-control-lg"
+                placeholder="Enter Job Title" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+
+            <div [hidden]="postForm.controls['jobtitle'].untouched || postForm.controls['jobtitle'].valid">
+                <div *ngIf="postForm.controls['jobtitle'].hasError('required')" class="text-danger">
+                    Job Title required
+                </div>
+            </div>
+
+            <label class="form-label">Location:</label>
+            <input type="text" formControlName="location" class="form-control form-control-lg"
+                placeholder="Enter Job Location" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+
+            <div [hidden]="postForm.controls['location'].untouched || postForm.controls['location'].valid">
+                <div *ngIf="postForm.controls['location'].hasError('required')" class="text-danger">
+                    Location required
+                </div>
+            </div>
+
+            <label class="form-label">Job Description:</label>
+            <textarea type="text" formControlName="jdesc" class="form-control form-control-lg"
+                placeholder="Enter Job Description" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}"></textarea>
+
+            <div [hidden]="postForm.controls['jdesc'].untouched || postForm.controls['jdesc'].valid">
+                <div *ngIf="postForm.controls['jdesc'].hasError('required')" class="text-danger">
+                    Job Description required
+                </div>
+            </div>
+
+            <label class="form-label">Skills Required:</label>
+            <input type="text" formControlName="skills" class="form-control form-control-lg"
+                placeholder="Enter Job Title" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+
+            <div [hidden]="postForm.controls['skills'].untouched || postForm.controls['skills'].valid">
+                <div *ngIf="postForm.controls['skills'].hasError('required')" class="text-danger">
+                    Skills required
+                </div>
+            </div>
+
+            <br>
+        </div>
+        <div class="button">
+            <button class="btn btn-primary btn-lg" type="submit">Post</button>
+        </div>
+    </form>
+</div>

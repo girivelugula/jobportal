@@ -1,0 +1,136 @@
+{
+  "Registration": [
+    {
+      "fname": "Velugula",
+      "lname": "Giridhar",
+      "email": "girivelugula.gv@gmail.com",
+      "password": "Giri@1234",
+      "phone": "7382194009",
+      "dob": "1994-01-13T18:30:00.000Z",
+      "gender": "Male",
+      "qual": "B.Tech(ECE)",
+      "pref": "Work From Home",
+      "exp": "2.5 Years",
+      "type": "Salaried",
+      "id": 1
+    },
+    {
+      "fname": "Hanumanthu",
+      "lname": "Suresh",
+      "email": "hanumanthusuresh1993@gmail.com",
+      "password": "SSuresh@1234",
+      "phone": "7382117622",
+      "dob": "1994-08-11T18:30:00.000Z",
+      "gender": "Male",
+      "qual": "B.Tech(Mech)",
+      "pref": "Office",
+      "exp": "0",
+      "type": "Job Seeker",
+      "id": 2
+    },
+    {
+      "fname": "Donkena",
+      "lname": "Satish",
+      "email": "donkenasatish@gmail.com",
+      "password": "Satish@1234",
+      "phone": "9852367412",
+      "dob": "1996-06-21T18:30:00.000Z",
+      "gender": "Male",
+      "qual": "B.Sc(Maths)",
+      "pref": "WFO",
+      "exp": "1.5 yrs",
+      "type": "Job Seeker",
+      "id": 3
+    },
+    {
+      "fname": "Paruvada",
+      "lname": "Sasi Kumar",
+      "email": "psasikumar@gmail.com",
+      "password": "Sasi@1234",
+      "phone": "9874563541",
+      "dob": "1995-01-04T18:30:00.000Z",
+      "gender": "Male",
+      "qual": "M.Tech(CSE)",
+      "pref": "Office",
+      "exp": "6 months",
+      "type": "Salaried",
+      "id": 4
+    },
+    {
+      "fname": "SINGAMPALLI",
+      "lname": "NAVEEN",
+      "email": "naveensingampalli@gmail.com",
+      "password": "Naveen@1234",
+      "phone": "9448952621",
+      "dob": "1994-02-09T18:30:00.000Z",
+      "gender": "Male",
+      "qual": "B.Tech(Mech)",
+      "pref": "WFO",
+      "exp": "1.5 yrs",
+      "type": "Job Seeker",
+      "id": 5
+    }
+  ],
+  "PersonalDetails": [
+    {
+      "addr": "3-38, Dora Residency , Chodavaram",
+      "city": "Visakhapatnam",
+      "state": "Andhra Pradesh",
+      "zip": "531036",
+      "id": 1
+    }
+  ],
+  "EducationDetails": [],
+  "AppliedJobs": [
+    {
+      "jobtitle": "Web Developer",
+      "location": "Hyderabad",
+      "jdesc": "Web Developing Skills with atleast 8 Years of Experience",
+      "skills": "React Js Framework",
+      "recId": "1",
+      "id": 1,
+      "email": "girivelugula.gv@gmail.com",
+      "phone": "7382194009",
+      "exp": "2.5 Years",
+      "userId": "1"
+    },
+    {
+      "jobtitle": "Python Developer",
+      "location": "Hyderabad",
+      "jdesc": "Python Developer with atleast 6 years experience , CTC starts from 24L/Year",
+      "skills": "Python , Java , C , C++",
+      "recId": "2",
+      "id": 2,
+      "email": "girivelugula.gv@gmail.com",
+      "phone": "7382194009",
+      "exp": "2.5 Years",
+      "userId": "1"
+    },
+    {
+      "jobtitle": "Java Script Expert",
+      "location": "Visakhapatnam",
+      "jdesc": "Java Script Coding with the related frame works.",
+      "skills": "Java Script, Angular , React JS",
+      "recId": "1",
+      "jobId": "",
+      "id": 3,
+      "email": "girivelugula.gv@gmail.com",
+      "phone": "7382194009",
+      "exp": "2.5 Years",
+      "userId": "1"
+    },
+    {
+      "jobtitle": "SQL Developer",
+      "location": "Chennai",
+      "jdesc": "SQL Based Development Job",
+      "skills": "SQL Server , Angular",
+      "recId": "2",
+      "jobId": "",
+      "id": 5,
+      "email": "girivelugula.gv@gmail.com",
+      "phone": "7382194009",
+      "exp": "2.5 Years",
+      "userId": "1"
+    }
+  ]
+}

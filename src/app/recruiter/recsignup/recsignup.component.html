@@ -1,0 +1,115 @@
+<app-header></app-header>
+
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden ">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                    The best offer <br />
+                    <span style="color: hsl(218, 81%, 75%)">for your business</span>
+                </h1>
+                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                    dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                    ab ipsum nisi dolorem modi. Quos?
+                </p>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                <div class="card bg-glass">
+                    <div class="card-body px-4 py-5 px-md-5 userReg">
+                        <form action="#" name="registration" [formGroup]="recRegisterForm" (ngSubmit)="collectUser()">
+
+                            <div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show"
+                                role="alert">
+                                <strong>Success!</strong> You Registration has been succcesful!.
+                                <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+
+                            <label for="cname" class="form-label">Company Name<span style="color:red">*</span></label>
+                            <input type="text" formControlName="cname" class="form-control"
+                                placeholder="Enter Firstname" [ngClass]="{'is-invalid': recRegisterForm.controls['cname'].invalid && (recRegisterForm.controls['cname'].touched || recRegisterForm.controls['cname'].dirty), 'is-valid':recRegisterForm.controls['cname'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="recRegisterForm.controls['cname'].hasError('required')">
+                                    Company Name required</div>
+                                <div *ngIf="recRegisterForm.controls['cname'].hasError('minlength')">
+                                    Company Name must be atleast 5 characters</div>
+                            </div>
+
+
+                            <label for="lname" class="form-label">Location<span style="color:red">*</span></label>
+                            <input type="text" formControlName="lname" class="form-control" id="lastname"
+                                placeholder="Enter Location" [ngClass]="{'is-invalid': recRegisterForm.controls['lname'].invalid && (recRegisterForm.controls['lname'].touched || recRegisterForm.controls['lname'].dirty), 'is-valid':recRegisterForm.controls['lname'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="recRegisterForm.controls['lname'].hasError('required')">
+                                    Location required</div>
+                            </div>
+
+                            <label for="email" class="form-label">Email address<span style="color:red">*</span></label>
+                            <input type="email" formControlName="email" class="form-control" id="email"
+                                placeholder="Enter Email" [ngClass]="{'is-invalid': recRegisterForm.controls['email'].invalid && (recRegisterForm.controls['email'].touched || recRegisterForm.controls['email'].dirty), 'is-valid':recRegisterForm.controls['email'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="recRegisterForm.controls['email'].hasError('required')">
+                                    Email required</div>
+                                <div *ngIf="recRegisterForm.controls['email'].hasError('email')">
+                                    Email must be in email format</div>
+                            </div>
+
+                            <label for="password" class="form-label">Password<span style="color:red">*</span></label>
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Enter Password" [ngClass]="{'is-invalid': recRegisterForm.controls['password'].invalid && (recRegisterForm.controls['password'].touched || recRegisterForm.controls['password'].dirty), 'is-valid':recRegisterForm.controls['password'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="recRegisterForm.controls['password'].hasError('required')">
+                                    Password required</div>
+                                <div *ngIf="recRegisterForm.controls['password'].hasError('pattern')">
+                                    Password with atleast 1 Alphabet , 1 Number and 1 Symbol</div>
+                            </div>
+
+                            <label for="phonenumber" class="form-label">Phone Number<span
+                                    style="color:red">*</span></label>
+                            <input type="text" formControlName="phone" class="form-control" id="phone"
+                                placeholder="Enter Phone Number" [ngClass]="{'is-invalid': recRegisterForm.controls['phone'].invalid && (recRegisterForm.controls['phone'].touched || recRegisterForm.controls['phone'].dirty), 'is-valid':recRegisterForm.controls['phone'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="recRegisterForm.controls['phone'].hasError('required')">
+                                    Phone Number required</div>
+                                <div *ngIf="recRegisterForm.controls['phone'].hasError('pattern')">
+                                    Phone Number must be 10 characters</div>
+                            </div>
+                           <br>
+
+                            <div class="col-md-12 text-center mb-3">
+                                <button type="submit" class=" btn btn-block mybtn btn-primary">REGISTER HERE</button>
+                            </div>
+
+
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center">Already have an account?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center"><a routerLink="/recruiter/rlogin" id="signin">Sign in Here</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+
+<app-footer></app-footer>

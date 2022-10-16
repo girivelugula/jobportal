@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<section class="vh-100">
+	<div class="container-fluid h-custom">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+
+
+
+			<div class="col-md-9 col-lg-6 col-xl-5">
+				<img src="https://bridgeslibrarysystem.org/wp-content/uploads/2021/12/Copy-of-Fixed-400x240-Website-Button.png"
+					class="img-fluid" alt="Sample image" height="200px" width="600px">
+			</div>
+			<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+				<br>
+				<form action="" method="post" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+					<!-- Email input -->
+					<div class="form-outline mb-4">
+						<label class="form-label" for="form3Example3">Email address<span
+								style="color:red">*</span></label>
+						<input type="email" id="form3Example3" class="form-control form-control-lg"
+							placeholder="Enter a valid email address" name="loginEmail" formControlName="loginEmail"
+							[ngClass]="{'fieldInvalid':'(minlength)||(required)'}" />
+					</div>
+
+					<div
+						[hidden]="loginForm.controls['loginEmail'].untouched || loginForm.controls['loginEmail'].valid">
+						<div *ngIf="loginForm.controls['loginEmail'].hasError('required')" class="text-danger">
+							Email required
+						</div>
+						<div *ngIf="loginForm.controls['loginEmail'].hasError('email')" class="text-danger">
+							Email must be in email format
+						</div>
+					</div>
+
+					<!-- Password input -->
+					<div class="form-outline mb-3">
+						<label class="form-label" for="form3Example4">Password<span style="color:red">*</span></label>
+						<input [type]="changetype?'password':'text'" id="form3Example4"
+							class="form-control form-control-lg" placeholder="Enter password"
+							formControlName="loginPass" [ngClass]="{'fieldInvalid':'(pattern)||(required)'}" />
+						<i (click)="toggle()" id="eyes" [ngClass]="visible?'fa  fa-eye':'fa fa-eye-slash'"></i>
+					</div>
+
+					<div [hidden]="loginForm.controls['loginPass'].untouched || loginForm.controls['loginPass'].valid">
+						<div *ngIf="loginForm.controls['loginPass'].hasError('required')" class="text-danger">
+							Password required</div>
+					</div>
+
+					<div class="d-flex justify-content-between align-items-center">
+
+						<div class="form-check mb-0">
+							<input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+							<label class="form-check-label" for="form2Example3">
+								Remember me
+							</label>
+						</div>
+						<a class="text-body">Forgot password?</a>
+					</div>
+
+					<div class="text-center text-lg-start mt-4 pt-2">
+						<button type="submit" class="btn btn-primary btn-lg">Login</button>
+						<p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?<a routerLink="/jobseeker/signup"
+								id="signup" class="link-danger">Register</a></p>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<app-footer></app-footer>

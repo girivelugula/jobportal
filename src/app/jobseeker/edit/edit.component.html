@@ -1,0 +1,55 @@
+
+                <form action="" method="post" [formGroup]="editUser" (ngSubmit)="updateUser()">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">First Name<span style="color:red">*</span></label>
+                        <input type="text" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter First Name" name="fname" formControlName="fname"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Last Name<span style="color:red">*</span></label>
+                        <input type="text" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter Last Name" name="lname" formControlName="lname"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Phone Number<span
+                                style="color:red">*</span></label>
+                        <input type="text" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter Phone" name="phone" formControlName="phone"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Email address<span
+                                style="color:red">*</span></label>
+                        <input readonly type="email" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter a valid email address" name="email" formControlName="email"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Password<span
+                                style="color:red">*</span></label>
+                        <input type="password" id="form3Example3" class="form-control form-control-lg"
+                            placeholder="Enter Password" name="password" formControlName="password"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label for="dob" class="form-label">D.O.B<span style="color:red">*</span></label>
+                        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker"
+                            formControlName="dob">
+                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i
+                                class="fa fa-calendar" aria-hidden="true"></i></button>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label for="type" class="form-label">Type<span style="color:red">*</span></label><br>
+                        <input type="radio" formControlName="type" value="Salaried">Salaried
+                        <input type="radio" formControlName="type" value="Job Seeker">JobSeeker
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                        </div>
+                    </div>
+
+                </form>

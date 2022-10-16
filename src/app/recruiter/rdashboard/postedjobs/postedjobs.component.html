@@ -1,0 +1,21 @@
+
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Job Role</th>
+                <th>Location</th>
+                <th>Job Description</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody class="table table-dark">
+            <tr *ngFor="let user of jobData;let i =index">
+                <td>{{i+1}}</td>
+                <td>{{user.jobtitle}}</td>
+                <td>{{user.location}}</td>
+                <td>{{user.jdesc}}</td>
+                <td>{{user.skills}}</td>
+            </tr>
+        </tbody>
+    </table>

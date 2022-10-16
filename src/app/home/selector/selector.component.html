@@ -1,0 +1,12 @@
+<body class="body"*ngIf="!isLogin" >
+    <div class="container">
+        <div class="row menu text-center">
+                <a><i class="lab la-fedora icon"></i>
+                <p class="logo">Pardh Jobs</p></a>
+        </div>
+            <div class="text-center login">
+                <button class="b2" routerLink="/jobseeker/login" (click)="isClick()">Looking For Job?</button><br><br>
+                <button class="b2" routerLink="/recruiter/rlogin" (click)="isClick()">Post a Job</button>
+            </div>
+        </div>
+</body>

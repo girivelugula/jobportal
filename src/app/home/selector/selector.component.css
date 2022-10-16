@@ -1,0 +1,51 @@
+.body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F9F8FE;
+}
+.menu
+{
+    padding: 15px;
+    background-color: #F9F8FE;
+}
+.menu .logo
+{
+    font-weight: bold;
+    position: relative;
+    font-family: 'MuseoModerno';
+    cursor: pointer;
+    bottom: 5px;
+    font-size: 25px;
+}
+.menu .icon
+{
+    color: #40189D;
+    font-size: 40px;
+}
+.menu  img,p
+{
+    display: inline;
+}
+.login
+{
+    margin-top: 100px;
+    padding: 50px 0px;
+}
+.b2
+{
+    font-weight: bold;
+    padding:10px 50px;
+    background: transparent;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    box-shadow: 5px 5px  #40189D;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.b2:hover
+{
+    border: none;
+    color: #F9F8FE;
+    box-shadow: none;
+    background-color:  #40189D;
+}

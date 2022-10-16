@@ -1,0 +1,91 @@
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h3><span class="lab la-fedora la-2x"></span><span class="font">Pardh Jobs</span></h3>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a routerLink="jcdash" class="active" (click)=" onDashClick()"><span class=" las la-home"></span><span
+                            class="font">Dashboard</span></a>
+                </li>
+                <li>
+                    <a routerLink="jobs" (click)="onJobClick()"><span class="las la-search"></span><span class="font">Search a
+                            Job</span></a>
+                </li>
+                <li>
+                    <a routerLink="appliedjobs" (click)=" onApplyShowClick()"><span class="las la-puzzle-piece"></span><span class="font">Applications</span></a>
+                </li>
+
+                <li>
+                    <a routerLink="edit" (click)=" onEditClick()"><span class="las la-envelope"></span><span
+                            class="font">Edit Profile</span></a>
+                </li>
+                <li>
+                    <a  routerLink="myprofile" (click)=" onProfileClick()"><span class="las la-chart-pie"></span><span class="font">My
+                            Profile</span></a>
+                </li>
+                <li>
+                    <a routerLink="news" (click)="onNewsClick()"><span class="las la-newspaper"></span><span class="font">News</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <i class="las la-angle-double-right"></i>
+                </label><span class="font">Dashboard</span>
+            </h2>
+            <div class="search">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search here">
+                <button class="b1" (click)="onLogout()">Logout</button>
+            </div>
+
+            <div class="user">
+
+                <img src="assets/user.jpg" height="50px" width="50px">
+                <div>
+                    <h4 class="font">{{username}}</h4>
+                    <small class="font">Premium</small>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div style="position: relative;bottom:90px;right: 50px;">
+
+        <div class="content" routerLink="jcdash" *ngIf="isDash">
+           <app-jcdash></app-jcdash>
+        </div>
+        
+        <div class="content" routerLink="appliedjobs" *ngIf="isApply">
+           <app-appliedjobs></app-appliedjobs>
+        </div>
+        <div class="content"  routerLink="edit" *ngIf="isEdit">
+            <app-edit></app-edit>
+        </div>
+        <div class="content" routerLink="news"  *ngIf="isNews">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="row content" routerLink="myprofile" *ngIf="isProfile">
+           <app-myprofile></app-myprofile>
+        </div>
+    </div>
+
+    <div class="showjobs" routerLink="jobs" *ngIf="isJob">
+        <app-searchjobs></app-searchjobs>
+    </div>
+
+
+</body>

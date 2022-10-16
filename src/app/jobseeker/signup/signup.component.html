@@ -1,0 +1,189 @@
+<app-header></app-header>
+
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden ">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+        <div class="row gx-lg-5 align-items-center mb-5">
+            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                    The best offer <br />
+                    <span style="color: hsl(218, 81%, 75%)">for your business</span>
+                </h1>
+                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                    dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                    ab ipsum nisi dolorem modi. Quos?
+                </p>
+            </div>
+
+            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+                <div class="card bg-glass">
+                    <div class="card-body px-4 py-5 px-md-5 userReg">
+                        <form action="#" name="registration" [formGroup]="registerForm" (ngSubmit)="collectUser()">
+
+                            <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
+                            <input type="text" formControlName="fname" class="form-control"
+                                placeholder="Enter Firstname"
+                                [ngClass]="{'is-invalid': registerForm.controls['fname'].invalid && (registerForm.controls['fname'].touched || registerForm.controls['fname'].dirty), 'is-valid':registerForm.controls['fname'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['fname'].hasError('required')">
+                                    First Name required</div>
+                                <div *ngIf="registerForm.controls['fname'].hasError('minlength')">
+                                    First Name must be atleast 5 characters</div>
+                            </div>
+
+
+                            <label for="lastname" class="form-label">Last Name<span style="color:red">*</span></label>
+                            <input type="text" formControlName="lname" class="form-control" id="lastname"
+                                placeholder="Enter Lastname"
+                                [ngClass]="{'is-invalid': registerForm.controls['lname'].invalid && (registerForm.controls['lname'].touched || registerForm.controls['lname'].dirty), 'is-valid':registerForm.controls['lname'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['lname'].hasError('required')">
+                                    Last Name required</div>
+                                <div *ngIf="registerForm.controls['lname'].hasError('minlength')">
+                                    Last Name must be atleast 5 characters</div>
+                            </div>
+
+                            <label for="email" class="form-label">Email address<span style="color:red">*</span></label>
+                            <input type="email" formControlName="email" class="form-control" id="email"
+                                placeholder="Enter Email"
+                                [ngClass]="{'is-invalid': registerForm.controls['email'].invalid && (registerForm.controls['email'].touched || registerForm.controls['email'].dirty), 'is-valid':registerForm.controls['email'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['email'].hasError('required')">
+                                    Email required</div>
+                                <div *ngIf="registerForm.controls['email'].hasError('email')">
+                                    Email must be in email format</div>
+                            </div>
+
+                            <label for="password" class="form-label">Password<span style="color:red">*</span></label>
+                            <input type="password" formControlName="password" class="form-control"
+                                placeholder="Enter Password"
+                                [ngClass]="{'is-invalid': registerForm.controls['password'].invalid && (registerForm.controls['password'].touched || registerForm.controls['password'].dirty), 'is-valid':registerForm.controls['password'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['password'].hasError('required')">
+                                    Password required</div>
+                                <div *ngIf="registerForm.controls['password'].hasError('pattern')">
+                                    Password with atleast 1 Alphabet , 1 Number and 1 Symbol</div>
+                            </div>
+
+                            <label for="phonenumber" class="form-label">Phone Number<span
+                                    style="color:red">*</span></label>
+                            <input type="text" formControlName="phone" class="form-control" id="phone"
+                                placeholder="Enter Phone Number"
+                                [ngClass]="{'is-invalid': registerForm.controls['phone'].invalid && (registerForm.controls['phone'].touched || registerForm.controls['phone'].dirty), 'is-valid':registerForm.controls['phone'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['phone'].hasError('required')">
+                                    Phone Number required</div>
+                                <div *ngIf="registerForm.controls['phone'].hasError('pattern')">
+                                    Phone Number must be 10 characters</div>
+                            </div>
+
+
+                            <label for="dob" class="form-label">D.O.B<span style="color:red">*</span></label>
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                                #d="ngbDatepicker" (dateSelect)="onDateSelect($event)" (click)="d.toggle()"
+                                formControlName="dob">
+
+                            <div
+                                [hidden]="registerForm.controls['dob'].untouched || registerForm.controls['dob'].valid">
+                                <div *ngIf="registerForm.controls['dob'].hasError('required')" class="text-danger">DOB
+                                    required</div>
+                            </div>
+
+
+                            <label for="gender" class="form-label">Gender<span style="color:red">*</span></label><br>
+                            <input type="radio" formControlName="gender" value="Male"
+                                [ngClass]="{'is-invalid': registerForm.controls['gender'].invalid && (registerForm.controls['gender'].touched || registerForm.controls['gender'].dirty), 'is-valid':registerForm.controls['gender'].valid}">Male
+                            <input type="radio" formControlName="gender" value="Female"
+                                [ngClass]="{'is-invalid': registerForm.controls['gender'].invalid && (registerForm.controls['gender'].touched || registerForm.controls['gender'].dirty), 'is-valid':registerForm.controls['gender'].valid}">Female
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['gender'].hasError('required')">
+                                    Gender is required</div>
+                            </div>
+
+                            <br>
+
+                            <label for="qual" class="form-label">Highest Qualification<span
+                                    style="color:red">*</span></label>
+                            <input type="text" formControlName="qual" class="form-control" id="qual"
+                                placeholder="Enter Qualification"
+                                [ngClass]="{'is-invalid': registerForm.controls['qual'].invalid && (registerForm.controls['qual'].touched || registerForm.controls['qual'].dirty), 'is-valid':registerForm.controls['qual'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['qual'].hasError('required')">
+                                    Qualification required</div>
+                            </div>
+
+                            <label for="exp" class="form-label">Work Experience<span
+                                    style="color:red">*</span>(any)</label>
+                            <input type="text" formControlName="exp" class="form-control" id="exp"
+                                placeholder="Enter Duration"
+                                [ngClass]="{'is-invalid': registerForm.controls['exp'].invalid && (registerForm.controls['exp'].touched || registerForm.controls['exp'].dirty), 'is-valid':registerForm.controls['exp'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['exp'].hasError('required')">
+                                    Work Experience required</div>
+                            </div>
+
+                            <label for="pref" class="form-label">Job Preference<span style="color:red">*</span></label>
+                            <input type="text" formControlName="pref" class="form-control" id="pref"
+                                placeholder="Office or WFO"
+                                [ngClass]="{'is-invalid': registerForm.controls['pref'].invalid && (registerForm.controls['pref'].touched || registerForm.controls['pref'].dirty), 'is-valid':registerForm.controls['pref'].valid}">
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['pref'].hasError('required')">
+                                    Job Preferance required</div>
+                            </div>
+
+                            <label for="type" class="form-label">Type<span style="color:red">*</span></label><br>
+                            <input type="radio" formControlName="type" value="Salaried"
+                                [ngClass]="{'is-invalid': registerForm.controls['type'].invalid && (registerForm.controls['type'].touched || registerForm.controls['type'].dirty), 'is-valid':registerForm.controls['type'].valid}">Salaried
+                            <input type="radio" formControlName="type" value="Job Seeker"
+                                [ngClass]="{'is-invalid': registerForm.controls['type'].invalid && (registerForm.controls['type'].touched || registerForm.controls['type'].dirty), 'is-valid':registerForm.controls['type'].valid}">JobSeeker
+
+                            <div class="invalid-feedback">
+                                <div *ngIf="registerForm.controls['type'].hasError('required')">
+                                    Type is required</div>
+                            </div>
+
+                            <br>
+
+                            <div class="col-md-12 text-center mb-3">
+                                <button type="submit" class=" btn btn-block mybtn btn-primary">REGISTER HERE FOR
+                                    FREE</button>
+                            </div>
+
+
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center">Already have an account?</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center"><a routerLink="/jobseeker/login" id="signin">Sign in Here</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+
+<app-footer></app-footer>
